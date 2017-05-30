@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+    <title>i3Plus+ Instructions</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+      <div class="navbar">
+          <ul>
+          <li style="text-align: center;margin: auto;border:none"><a style="pointer-events: none; cursor: default;">i3Plus+</a></li>
+          <li style="float:right"><a href="https://github.com/Silverquark/i3PlusPlusSite/releases">Download</a></li>
+          <li style="float:right"><a href="instructions.html">Instructions</a></li>          
+          <li style="float:right"><a href="faq.html">FAQ</a></li>
+          <li style="float:right"><a href="screens.html">Screenshots</a></li>
+          <li style="float:right"><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        
+        <h1>Instructions</h1><br>
+        
+        The firmware consists of 2 parts:<br> The touchscreen firmware and the printer firmware. <br>
+        <b>You need to flash both! One will not work correctly without the other!</b><br><br>
+        
+        Requirements:<br>
+        - microSD card<br>
+        - hex screw drivers (come with the printer)
+        
+        <br><br>
+        Download the latest release of the firmware from <a href="https://github.com/Silverquark/i3PlusPlusSite/releases">here.</a> <br/>
+        In the downloaded zip file you will find 2 folders: "Marlin" and "LCDFirmware".
+        <br><br>
+        <b>Installing the printer firmware:</b><br>
+        Connect your printer to your PC.<br>
+        Download the Arduino IDE from <a href="https://www.arduino.cc/en/Main/Software">here</a>.<br>
+        Open the Arduino IDE and under <b>Tools</b> select <b>Arduino/Genuino Mega or Mega 2560</b> as your <b>Board</b>.<br/>
+        Make sure <b>ATMega2560 (Mega 2560)</b> is selected as a <b>Processor</b>.<br/>
+        Select the COM-Port your printer uses under <b>Port</b>.<br><br>
+        Click File->Open and select the <b>Marlin.ino</b> located in the <b>Marlin</b> folder in the download.<br>
+        Then click the <b>Upload</b> button which is repesented by a right pointing arrow.<br>
+        When the Upload is finished your printer will reboot.<br><br>
+        
+        <b>Installing the touchscreen firmware:</b><br>
+        Get your microSD card and insert it to your pc. Right click it and choose <b>format</b>.<br>
+        Choose <b>FAT-32</b> for file system and <b>4096 Bytes</b> for sector size.<br>
+        Also uncheck quick format.<br>
+        After formating finished, open it up and copy all contents of the <b>LCDFirmware</b> directory to it.<br>
+        Then insert the microSD card in your touchscreen and power on the printer.<br>
+        You should see changing images on your touchscreen.<br>
+        The screen will stay white when the flashing finished.<br>
+        After that reboot your printer and you should see the new boot animation.<br><br>
+        <a href="https://www.youtube.com/watch?v=AQZamujQBdo">Look here if you dont know how to access the touchscreens microSD slot.</a>
+      </div>
+	</body>
+</html>
