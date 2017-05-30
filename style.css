@@ -1,0 +1,72 @@
+body {
+	color: #000000;
+  background: #FFFFFF;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.navbar {
+  color: #FFFFFF;
+	font-size: 20px;
+	font-weight: 400;
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #009688;
+}
+
+.navbar li {
+  float: left;
+  border-right:1px solid #007267;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #006057;
+}
+
+.content {
+  
+  padding: 14px 16px;
+  margin:auto;
+  margin-top: 20px;
+  margin-bottom: 19px;
+  width:90%;
+  background: #FFFFFF;
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.page {
+  background: #ECF0F5;
+	font-size: 20px;
+	font-weight: 400;
+  margin: auto;
+  margin-top:100px;
+	width: 640px;
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+  padding-bottom: 1px;
+}
+
+h1 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 28px;
+}
