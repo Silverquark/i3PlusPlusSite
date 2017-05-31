@@ -11,25 +11,51 @@
           <li style="float:right"><a href="https://github.com/Silverquark/i3PlusPlusSite/releases">Download</a></li>
           <li style="float:right"><a href="instructions.html">Instructions</a></li>          
           <li style="float:right"><a href="faq.html">FAQ</a></li>
-          <li style="float:right"><a href="screens.html">Screenshots</a></li>
+          <li style="float:right"><a href="http://imgur.com/a/DrUeJ">Screenshots</a></li>
           <li style="float:right"><a href="index.html">Home</a></li>
         </ul>
       </div>
       <div class="content">
         <h1>FAQ</h1><br>
         
-        <b>Q:Can this break my printer?<br></b>
-        A:Nope, extremely unlikely. You can always revert back to the <a href="https://github.com/garychen99/Duplicator-i3-plus">original firmware</a>.<br><br>
+        <b>Q: Can this break my printer?<br></b>
+        A: Nope, extremely unlikely. You can always revert back to the <a href="https://github.com/garychen99/Duplicator-i3-plus">original firmware</a>.<br><br>
         
-        <b>Q:I am using the Cocoon Create Touch/Maker Select Plus can i use this firmware?<br></b>
+        <b>Q: I am using the Cocoon Create Touch/Maker Select Plus can i use this firmware?<br></b>
         A:Yes you can. But since neither Cocoon nor Maker Select have made their firmware public yet, you can't revert back to the original firmware :/<br/>
         You could always flash the official wanhao firmware. It has different menu layouts though.<br>
         I've already contacted Cocoon and Maker Select.<br>Cocoon told me that they would release it soon, but have yet to do so.<br> Maker Select just didnt respond at all.<br>
         So if you have interest, contact them to let them know the community has a demand for the firmware!
         <br><br>
         
-        <b>Q:Why doesn't this firmware have motor and pid settings?<br></b>
-        A:This firmware has auto pid tuning built in so you dont need to change pid manually.<br>Anyone who wants to modify the motor settings should already know how to do it.<br> I removed the menu cause i felt it was unnecessary and wasted screen space.
+        <b>Q: I found a bug. How can i report it?</b><br>
+        A: You can either open an issue on the <a href="https://github.com/Silverquark/i3PlusPlus">github page</a> or send me a message over on <a href="https://discord.gg/sd4rE">Discord</a> (My username is Quark).
+        <br><br>
+        
+        <b>Q: Why doesn't this firmware have motor and pid settings?<br></b>
+        A:This firmware has auto pid tuning built in so you dont need to change pid manually.<br>Anyone who wants to modify the motor settings should already know how to do it.<br>
+        I removed the menu cause i felt it was unnecessary and wasted screen space.
+        <br><br>
+        
+        <b>Q: What is LCD Update Mode?</b><br>
+        A: It's a feature useful for debugging the firmware. It tells the printer to act as a serial bridge,<br> so all send serial commands get forwarded directly to the touchscreen.
+        <br><br>
+        
+        <b>Q: Why do my aborted prints count as completed prints?</b><br>
+        A: Thats the way Marlin's statistics work. Only power outages or similar issues get counted as failed prints.
+        <br><br>
+        
+        <b>Q: Those temp numbers are ugly!</b><br>
+        A: Yes, i know. It's high on the list for future changes. But i didnt want to wait any longer with the first release.
+        <br><br>
+        
+        <b>Q: I dont like the design. Will there be alternatives in the future?</b><br>
+        Nepe is working on his <a href="https://github.com/nepeee/i3Extra">i3Extra</a> firmware. It will have a completely different design but will have similar features.
+        <br><br>
+
+        <b>Q: I know how to code. Can i contribute to this project?</b><br>
+        A: Sure! Head over to our <a href="https://discord.gg/sd4rE">Discord</a> to get in contact.
+        <br><br>
         
       </div>
     </div>
