@@ -8,7 +8,7 @@
       <div class="navbar">
           <ul>
           <li style="text-align: center;margin: auto;border:none"><a style="pointer-events: none; cursor: default;">i3Plus+</a></li>
-          <li style="float:right"><a href="https://github.com/Silverquark/i3PlusPlus/releases">Download</a></li>
+          <li style="float:right"><a href="https://github.com/Silverquark/i3PlusPlusSite/releases">Download</a></li>
           <li style="float:right"><a href="instructions.html">Instructions</a></li>          
           <li style="float:right"><a href="faq.html">FAQ</a></li>
           <li style="float:right"><a href="http://imgur.com/a/DrUeJ">Screenshots</a></li>
@@ -23,14 +23,21 @@
         <b>You need to flash both! One will not work correctly without the other!</b><br><br>
         
         Requirements:<br>
-        - microSD card (8GB or smaller) <br>
+        - microSD card (8GB or smaller)<br>
         - hex screw drivers (come with the printer)
         
         <br><br>
         Download the latest release of the firmware from <a href="https://github.com/Silverquark/i3PlusPlusSite/releases">here.</a> <br/>
-        In the downloaded zip file you will find 2 folders: "Marlin" and "LCDFirmware".
+        In the downloaded zip file you will find 2 folders named "Marlin" and "LCDFirmware" and a file named "i3PlusPlus_XX.hex"
         <br><br>
         <b>Installing the printer firmware:</b><br>
+        
+        <br><u>-Using Cura:</u><br>
+        Under <b>Machine</b> add your i3 Plus as a Machine.<br>
+        Then click Machine again and press "Install custom firmware".<br>
+        Select the <b>"i3PlusPlus_XX.hex"</b> and hit open.<br>
+        
+        <br><u>-Using Arduino IDE:</u><br>
         Connect your printer to your PC.<br>
         Download the Arduino IDE from <a href="https://www.arduino.cc/en/Main/Software">here</a>.<br>
         Open the Arduino IDE and under <b>Tools</b> select <b>Arduino/Genuino Mega or Mega 2560</b> as your <b>Board</b>.<br/>
@@ -38,7 +45,6 @@
         Select the COM-Port your printer uses under <b>Port</b>.<br><br>
         Click File->Open and select the <b>Marlin.ino</b> located in the <b>Marlin</b> folder in the download.<br>
         Then click the <b>Upload</b> button which is repesented by a right pointing arrow.<br>
-	It might show a few warnings but it should compile and upload just fine.<br>
         When the Upload is finished your printer will reboot.<br><br>
         
         <b>Installing the touchscreen firmware:</b><br>
