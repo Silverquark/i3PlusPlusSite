@@ -1,65 +1,97 @@
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-    <title>i3Plus+ Instructions</title>
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-      <div class="navbar">
-          <ul>
-          <li style="text-align: center;margin: auto;border:none"><a style="pointer-events: none; cursor: default;">i3Plus+</a></li>
-          <li style="float:right"><a href="https://github.com/Silverquark/i3PlusPlus/releases">Download</a></li>
-          <li style="float:right"><a href="instructions.html">Instructions</a></li>          
-          <li style="float:right"><a href="faq.html">FAQ</a></li>
-          <li style="float:right"><a href="http://imgur.com/a/DrUeJ">Screenshots</a></li>
-          <li style="float:right"><a href="index.html">Home</a></li>
-        </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>i3Plus+ Instructions</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">i3Plus+</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="https://imgur.com/a/DrUeJ">Screenshots</a></li>
+        <li><a href="#">Instructions</a></li>
+        <li><a href="https://github.com/Silverquark/i3PlusPlus/releases">Download</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><h5 class="header">i3Plus+</h5></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="https://imgur.com/a/DrUeJ">Screenshots</a></li>
+        <li><a href="#">Instructions</a></li>
+        <li><a href="https://github.com/Silverquark/i3PlusPlus/releases">Download</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h2 class="header center orange-text">Instructions</h2>
+
+
+
+      <div class="container">
+        <div class="card-panel">
+          The firmware consists of 2 parts:<br> The touchscreen firmware and the printer firmware. <br>
+          <b>You need to flash both! One will not work correctly without the other!</b><br><br>
+          
+          Requirements:<br>
+          - microSD card (8GB or smaller)<br>
+          - hex screw drivers (come with the printer)
+          
+          <br><br>
+          Download the latest release of the firmware from <a href="https://github.com/Silverquark/i3PlusPlus/releases">here.</a> <br/>
+          In the downloaded zip file you will find 2 folders named "Marlin" and "LCDFirmware" and a file named "i3PlusPlus_XX.hex"
+          <br><br>
+          <b>Installing the printer firmware:</b><br>
+          
+          <br><u>-Using Cura:</u><br>
+          Under <b>Machine</b> add your i3 Plus as a Machine.<br>
+          Then click Machine again and press "Install custom firmware".<br>
+          Select the <b>"i3PlusPlus_XX.hex"</b> and hit open.<br>
+          
+          <br><u>-Using Arduino IDE:</u><br>
+          Connect your printer to your PC.<br>
+          Download the Arduino IDE from <a href="https://www.arduino.cc/en/Main/Software">here</a>.<br>
+          Open the Arduino IDE and under <b>Tools</b> select <b>Arduino/Genuino Mega or Mega 2560</b> as your <b>Board</b>.<br/>
+          Make sure <b>ATMega2560 (Mega 2560)</b> is selected as a <b>Processor</b>.<br/>
+          Select the COM-Port your printer uses under <b>Port</b>.<br><br>
+          Click File->Open and select the <b>Marlin.ino</b> located in the <b>Marlin</b> folder in the download.<br>
+          Then click the <b>Upload</b> button which is repesented by a right pointing arrow.<br>
+          When the Upload is finished your printer will reboot.<br><br>
+          
+          <b>Installing the touchscreen firmware:</b><br><br>
+          Get your microSD card and insert it to your pc. Right click it and choose <b>format</b>.<br>
+          Choose <b>FAT-32</b> for file system and <b>4096 Bytes</b> for sector size.<br>
+          Also uncheck quick format.<br>
+          After formating finished, open it up and copy all contents of the <b>LCDFirmware</b> directory to it.<br>
+          Then insert the microSD card in your touchscreen and power on the printer.<br>
+          You should see changing images on your touchscreen.<br>
+          The screen will stay white when the flashing finished.<br>
+          Remove the microSD card and reboot the printer.<br>
+          After that reboot your printer and you should see the new boot animation.<br><br>
+          <a href="https://www.youtube.com/watch?v=AQZamujQBdo">Look here if you dont know how to access the touchscreens microSD slot.</a>
+          <br><br>
+        </div>
       </div>
-      <div class="content">
         
-        <h1>Instructions</h1><br>
-        
-        The firmware consists of 2 parts:<br> The touchscreen firmware and the printer firmware. <br>
-        <b>You need to flash both! One will not work correctly without the other!</b><br><br>
-        
-        Requirements:<br>
-        - microSD card (8GB or smaller)<br>
-        - hex screw drivers (come with the printer)
-        
-        <br><br>
-        Download the latest release of the firmware from <a href="https://github.com/Silverquark/i3PlusPlus/releases">here.</a> <br/>
-        In the downloaded zip file you will find 2 folders named "Marlin" and "LCDFirmware" and a file named "i3PlusPlus_XX.hex"
-        <br><br>
-        <b>Installing the printer firmware:</b><br>
-        
-        <br><u>-Using Cura:</u><br>
-        Under <b>Machine</b> add your i3 Plus as a Machine.<br>
-        Then click Machine again and press "Install custom firmware".<br>
-        Select the <b>"i3PlusPlus_XX.hex"</b> and hit open.<br>
-        
-        <br><u>-Using Arduino IDE:</u><br>
-        Connect your printer to your PC.<br>
-        Download the Arduino IDE from <a href="https://www.arduino.cc/en/Main/Software">here</a>.<br>
-        Open the Arduino IDE and under <b>Tools</b> select <b>Arduino/Genuino Mega or Mega 2560</b> as your <b>Board</b>.<br/>
-        Make sure <b>ATMega2560 (Mega 2560)</b> is selected as a <b>Processor</b>.<br/>
-        Select the COM-Port your printer uses under <b>Port</b>.<br><br>
-        Click File->Open and select the <b>Marlin.ino</b> located in the <b>Marlin</b> folder in the download.<br>
-        Then click the <b>Upload</b> button which is repesented by a right pointing arrow.<br>
-        When the Upload is finished your printer will reboot.<br><br>
-        
-        <b>Installing the touchscreen firmware:</b><br><br>
-        Get your microSD card and insert it to your pc. Right click it and choose <b>format</b>.<br>
-        Choose <b>FAT-32</b> for file system and <b>4096 Bytes</b> for sector size.<br>
-        Also uncheck quick format.<br>
-        After formating finished, open it up and copy all contents of the <b>LCDFirmware</b> directory to it.<br>
-        Then insert the microSD card in your touchscreen and power on the printer.<br>
-        You should see changing images on your touchscreen.<br>
-        The screen will stay white when the flashing finished.<br>
-        Remove the microSD card and reboot the printer.<br>
-        After that reboot your printer and you should see the new boot animation.<br><br>
-        <a href="https://www.youtube.com/watch?v=AQZamujQBdo">Look here if you dont know how to access the touchscreens microSD slot.</a>
-        <br><br>
-	      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <br><br>
+    </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l8 s12">
+          <h5 class="white-text">About i3Plus+</h5>
+          <p class="grey-text text-lighten-4">i3Plus+ is mostly being developed and mantained by me alone in my free time. So if you like i3Plus+ and want to support it's development, consider donating.</p>
+          	      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="lc" value="US">
         <input type="hidden" name="hosted_button_id" value="5WYG2RBNTUZ7W">
@@ -67,7 +99,26 @@
         </form>
 
         </div>
-      
-      
-	</body>
+        <div class="col l4 s12">
+        <h5 class="white-text">Credits</h5>
+          <ul>
+          Big thanks to <a href="https://github.com/nepeee/" class="white-text">nepe</a>. This firmware wouldn't be possible without him and his original work on <a href="https://github.com/nepeee/i3Extra" class="white-text">i3Extra!</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Powered by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
 </html>

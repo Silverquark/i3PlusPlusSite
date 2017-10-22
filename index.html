@@ -1,46 +1,124 @@
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-    <title>i3Plus+ Home</title>
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-      <div class="navbar">
-          <ul>
-          <li style="text-align: center;margin: auto;border:none"><a style="pointer-events: none; cursor: default;">i3Plus+</a></li>
-          <li style="float:right"><a href="https://github.com/Silverquark/i3PlusPlus/releases">Download</a></li>
-          <li style="float:right"><a href="instructions.html">Instructions</a></li>          
-          <li style="float:right"><a href="faq.html">FAQ</a></li>
-          <li style="float:right"><a href="http://imgur.com/a/DrUeJ">Screenshots</a></li>
-          <li style="float:right"><a href="index.html">Home</a></li>
-        </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>i3Plus+ Home</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">i3Plus+</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="https://imgur.com/a/DrUeJ">Screenshots</a></li>
+        <li><a href="instructions.html">Instructions</a></li>
+        <li><a href="https://github.com/Silverquark/i3PlusPlus/releases">Download</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><h5 class="header">i3Plus+</h5></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="https://imgur.com/a/DrUeJ">Screenshots</a></li>
+        <li><a href="instructions.html">Instructions</a></li>
+        <li><a href="https://github.com/Silverquark/i3PlusPlus/releases">Download</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br>
+      <h1 class="header center orange-text">i3Plus+</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">A feature rich custom firmware for the Wanhao i3 Plus</h5>
       </div>
-      <div class="content">
-        i3Plus+ is a custom firmware for the Wanhao Duplicator i3 Plus and its rebrands. It offers a complete redesign of the touchscreen interface and new features.<br/> Those features include:
-        <ul>
-        <li>Complete menu rework</li>
-        <li>Overhauled leveling assistant</li>
-        <li>Overhauled move menu</li>
-        <li>Live temperature graphs</li>
-        <li>PID Autotuning menu</li>
-        <li>Multiple preheat profiles with customizable temperatures</li>
-        <li>Printing statistics</li>
-        </ul>
-        It is also based on the latest <a href="https://github.com/MarlinFirmware/Marlin/">Marlin firmware 1.1.1</a> instead of an old one like the original version. <br><br>
-        Big thanks to <a href="https://github.com/nepeee/">nepe<a/>. This firmware wouldn't be possible without him!<br>
-        He was the one who figured most of the stuff out for the touchscreen firmware and is responsible for many of the features this firmware has!
-        <br><br>
-	      <b>Current release: Beta 3</b> <br><br>
-        Keep in mind that this is a beta version.
-        <br><br>      
-	      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <div class="row center">
+        <a href="instructions.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">New Features!</h5>
+
+            <p class="light">i3Plus+ adds new features to your printer. Ever wanted to preheat your printer to a specific temperature instead of the original firmwares PLA and ABS presets? With i3Plus+ you can create your own presets!</p>
+          </div>
+        </div>
+      
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">More up-to-date!</h5>
+
+            <p class="light">Wanhao's original firmware is based on an old outdated version of Marlin. i3Plus+ is more up-to-date with newer Marlin releases, so you aren't missing out on bugfixes and new features!</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Fully open source!</h5>
+
+            <p class="light">Although Wanhao has released the source code for an old version of their firmware, they aren't communicating changes and keep the source code of newer versions behind locked doors. i3Plus+'s source code is publicly available, so everyone can tweak and customize it to their needs.</p>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l8 s12">
+          <h5 class="white-text">About i3Plus+</h5>
+          <p class="grey-text text-lighten-4">i3Plus+ is mostly being developed and mantained by me alone in my free time. So if you like i3Plus+ and want to support it's development, consider donating.</p>
+          	      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="lc" value="US">
         <input type="hidden" name="hosted_button_id" value="5WYG2RBNTUZ7W">
         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="Donate">
         </form>
 
+        </div>
+        <div class="col l4 s12">
+        <h5 class="white-text">Credits</h5>
+          <ul>
+          Big thanks to <a href="https://github.com/nepeee/" class="white-text">nepe</a>. This firmware wouldn't be possible without him and his original work on <a href="https://github.com/nepeee/i3Extra" class="white-text">i3Extra!</a>
+          </ul>
+        </div>
       </div>
     </div>
-	</body>
+    <div class="footer-copyright">
+      <div class="container">
+      Powered by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
 </html>

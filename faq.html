@@ -1,75 +1,118 @@
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-    <title>i3Plus+ FAQ</title>
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-      <div class="navbar">
-          <ul>
-          <li style="text-align: center;margin: auto;border:none"><a style="pointer-events: none; cursor: default;">i3Plus+</a></li>
-          <li style="float:right"><a href="https://github.com/Silverquark/i3PlusPlus/releases">Download</a></li>
-          <li style="float:right"><a href="instructions.html">Instructions</a></li>          
-          <li style="float:right"><a href="faq.html">FAQ</a></li>
-          <li style="float:right"><a href="http://imgur.com/a/DrUeJ">Screenshots</a></li>
-          <li style="float:right"><a href="index.html">Home</a></li>
-        </ul>
-      </div>
-      <div class="content">
-        <h1>FAQ</h1><br>
-        
-        <b>Q: Can this break my printer?<br></b>
-        A: Nope, extremely unlikely. You can always revert back to the <a href="https://github.com/Silverquark/i3PlusPlus/tree/master/OriginalFirmwares">original firmware</a>.
-	<br><br>
-        
-        <b>Q: I am using the Maker Select Plus can i use this firmware?<br></b>
-        A:Yes you can. But since Maker Select havent made their firmware public yet, you can't revert back to the original firmware:/<br/>
-        You could always flash the official wanhao firmware. It has different menu layouts though.<br>
-        I've already contacted Maker Select, they just didnt respond at all.<br>
-        So if you have interest, contact them to let them know the community has a demand for the firmware!
-        <br><br>
-        
-        <b>Q: I found a bug. How can i report it?</b><br>
-        A: You can either open an issue on the <a href="https://github.com/Silverquark/i3PlusPlus">github page</a> or send me a message over on <a href="https://discord.gg/sd4rE">Discord</a> (My username is Quark).
-        <br><br>
-        
-        <b>Q: Why doesn't this firmware have motor and pid settings?<br></b>
-        A:This firmware has auto pid tuning built in so you dont need to change pid manually.<br>Anyone who wants to modify the motor settings should already know how to do it.<br>
-        I removed the menu cause i felt it was unnecessary and wasted screen space.
-        <br><br>
-        
-        <b>Q: What is LCD Update Mode?</b><br>
-        A: It's a feature useful for debugging the firmware. It tells the printer to act as a serial bridge,<br> so all send serial commands get forwarded directly to the touchscreen.
-        <br><br>
-        
-        <b>Q: Why do my aborted prints count as completed prints?</b><br>
-        A: Thats the way Marlin's statistics work. Only power outages or similar issues get counted as failed prints.
-        <br><br>
-        
-        <b>Q: Those temp numbers are ugly!</b><br>
-        A: Yes, i know. It's high on the list for future changes. But i didnt want to wait any longer with the first release.
-        <br><br>
-        
-        <b>Q: I dont like the design. Will there be alternatives in the future?</b><br>
-        Nepe is working on his <a href="https://github.com/nepeee/i3Extra">i3Extra</a> firmware. It will have a completely different design but will have similar features.
-        <br><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>i3Plus+ Instructions</title>
 
-        <b>Q: I know how to code. Can i contribute to this project?</b><br>
-        A: Sure! Head over to our <a href="https://discord.gg/EHpzekb">Discord</a> to get in contact.
-        <br><br>
-	      
-        <b>Q: Help, i cant flash the touchscreen firmware</b><br>
-        A: In some cases microSD cards bigger then 8GB can cause issues. Try a smaller one!
-        <br><br>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">i3Plus+</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="https://imgur.com/a/DrUeJ">Screenshots</a></li>
+        <li><a href="instructions.html">Instructions</a></li>
+        <li><a href="https://github.com/Silverquark/i3PlusPlus/releases">Download</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><h5 class="header">i3Plus+</h5></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="https://imgur.com/a/DrUeJ">Screenshots</a></li>
+        <li><a href="instructions.html">Instructions</a></li>
+        <li><a href="https://github.com/Silverquark/i3PlusPlus/releases">Download</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h2 class="header center orange-text">FAQ</h2>
+
+
+
+      <div class="container">
+        <div class="card-panel">
+          <b>Q: What printers can i use this firmware on?<br></b>
+          A: You can use this firmware on the Wanhao i3 Plus and clones/rebrands:<br/>
+          Wanhao Duplicator i3 Plus<br>
+          Cocoon Create Touch<br>
+          Monoprice Maker Select Plus (no way to restore original firmware!)
+          <br><br>
+          
+          <b>Q: What if i have problems with this firmware on my Maker Select Plus?<br></b>
+          A:Monoprice hasn't made their firmware public yet, you can't revert back to the original firmware.<br/>
+          You can however flash the official Wanhao or Cocoon Create firmware, if you have problems.<br>
+          The Cocoon Create firmware should be nearly identical to the Monoprice firmware.<br>
+          I've already contacted Monoprice multiple times, they just dont respond at all.<br>
+          So if you would like to be able to reflash your original firmware, contact them to let them know the community has a demand for the firmware!
+          <br><br>
         
-	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <b>Q: Can this break my printer?<br></b>
+          A: Nope, extremely unlikely. You can always revert back to the <a href="https://github.com/Silverquark/i3PlusPlus/tree/master/OriginalFirmwares">original firmwares</a> (except on the Monoprice Maker Select Plus).
+          <br><br>
+          
+          <b>Q: I found a bug. How can i report it?</b><br>
+          A: You can either open an issue on the <a href="https://github.com/Silverquark/i3PlusPlus">github page</a> or send me an email: <a href="http://www.google.com/recaptcha/mailhide/d?k=01PdrrNsAxWb3b4aRUVPa-DQ==&amp;c=R-U6SiBcymTtb0DJEWY1b8JmqrrvEtbTNPAXnE7Oup0=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01PdrrNsAxWb3b4aRUVPa-DQ\x3d\x3d\x26c\x3dR-U6SiBcymTtb0DJEWY1b8JmqrrvEtbTNPAXnE7Oup0\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">s...@gmail.com</a>
+          <br><br>
+          
+          <b>Q: Why do my aborted prints count as completed prints?</b><br>
+          A: Thats the way Marlin's statistics work. Only power outages or similar issues get counted as failed prints.
+          <br><br>
+                    
+          <b>Q: Help, i cant flash the touchscreen firmware</b><br>
+          A: In some cases microSD cards bigger then 8GB can cause issues. Try a smaller one!
+          <br><br>
+
+          <b>Q: I know how to code. Can i contribute to this project?</b><br>
+          A: Of course! Feel free to send pull requests. You can also contact me if you have technical questions! <a href="http://www.google.com/recaptcha/mailhide/d?k=01PdrrNsAxWb3b4aRUVPa-DQ==&amp;c=R-U6SiBcymTtb0DJEWY1b8JmqrrvEtbTNPAXnE7Oup0=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01PdrrNsAxWb3b4aRUVPa-DQ\x3d\x3d\x26c\x3dR-U6SiBcymTtb0DJEWY1b8JmqrrvEtbTNPAXnE7Oup0\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">s...@gmail.com</a>
+
+        </div>
+      </div>
+    
+    </div>
+    <br><br>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l8 s12">
+          <h5 class="white-text">About i3Plus+</h5>
+          <p class="grey-text text-lighten-4">i3Plus+ is being developed and mantained mostly by me alone in my free time. So if you like i3Plus+ and want to support it's development, consider donating.</p>
+          	      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="lc" value="US">
         <input type="hidden" name="hosted_button_id" value="5WYG2RBNTUZ7W">
         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="Donate">
         </form>
-        
+
+        </div>
+        <div class="col l4 s12">
+        <h5 class="white-text">Credits</h5>
+          <ul>
+          Big thanks to <a href="https://github.com/nepeee/" class="white-text">nepe</a>. This firmware wouldn't be possible without him and his original work on <a href="https://github.com/nepeee/i3Extra" class="white-text">i3Extra!</a>
+          </ul>
+        </div>
       </div>
     </div>
-	</body>
+    <div class="footer-copyright">
+      <div class="container">
+      Powered by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
 </html>
